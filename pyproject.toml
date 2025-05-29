@@ -1,0 +1,29 @@
+[project]
+name = "Text2DNA"
+version = "0.1.0"
+description = "English to DNA sequence"
+readme = "README.md"
+authors = [
+    { name = "deepthought", email = "deepthough@postech.ac.kr" }
+]
+requires-python = ">=3.11"
+dependencies = [
+    "click>=8.2.1",
+]
+
+[project.scripts]
+Text2DNA  = "Text2DNA.main:cli"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[dependency-groups]
+dev = [
+    "pytest>=8.3.5",
+]
+
+[tool.pytest.ini_options]
+markers = [
+    "performance: 성능 테스트 마크"
+]
